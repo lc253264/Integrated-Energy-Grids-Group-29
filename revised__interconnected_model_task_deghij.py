@@ -15,8 +15,8 @@ import pandas as pd
 # In[3]:
 
 
-df_global = pd.read_csv("C:/Users/jonas/Downloads/df_global.csv", sep=',')
-df_techno = pd.read_csv("C:/Users/jonas/Downloads/df_techno.csv", sep=',')
+df_global = pd.read_csv("data/df_global.csv", sep=',')
+df_techno = pd.read_csv("data/df_techno.csv", sep=',')
 
 # Convert dates
 df_global['utc_time'] = pd.to_datetime(df_global['utc_time'].str.strip(), dayfirst=False, errors='coerce')
