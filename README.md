@@ -230,15 +230,16 @@ Code
 **CO₂ Intensities:**
 | Source | CO₂ Intensity |
 |--------|--------------|
-| Coal | 0.356 tCO₂/MWh |
-| Gas (CCGT) | 0.202 tCO₂/MWh |
-| Solar/Wind | 0 tCO₂/MWh |
-| Nuclear | 0 tCO₂/MWh |
+| Coal | 1.000 tCO₂/MWh |
+| Gas (CCGT/OCGT) | 0.430 tCO₂/MWh |
+| Wind | 0.012 tCO₂/MWh |
+| Solar | 0.037 tCO₂/MWh |
+| Nuclear | 0.005 tCO₂/MWh |
 
 **Marginal Abatement Cost (MAC):**
 - Calculated from shadow prices (dual values) of CO₂ constraint
 - Indicates required CO₂ price to achieve decarbonization targets
-- Compared with existing ETS price (€62/tCO₂)
+- Compared with existing ETS price (62€/tCO₂)
 
 
 ## Tools & Software Stack
@@ -331,6 +332,11 @@ Code
    https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era5
    - Historical weather data
    - Wind & solar resource assessment
+
+6. **NOWTRICITY**
+   https://www.nowtricity.com/
+   - Belgium carbon emissions
+   - CO2 emissions factors 
 
 ---
 
