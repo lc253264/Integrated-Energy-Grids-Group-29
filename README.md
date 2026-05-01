@@ -27,10 +27,7 @@ This repository contains the coursework for DTU Course 46770: Integrated Energy 
 - **i)** Sector coupling (electricity + heating/transport)
 - **j)** Regional policy impact experiment
 
-## Repository Structure
 
-Integrated-Energy-Grids-Group-29/ ├── Belgium_model_task_abcf.ipynb # Single-country optimization (Tasks a-c, f) ├── interconnected_model_task_deghij.ipynb # Multi-country network (Tasks d, g, h, i, j) ├── interconnected_model_task_deghij.py # Python implementation ├── revised__interconnected_model_task_deghij.py # Revised version ├── data/ │ ├── ods001.csv # Belgian electricity load (ENTSOE raw) │ ├── df_load.csv # Processed hourly load data │ ├── df_recent.csv # Recent 3-year load (2023-2025) │ ├── onshore_wind_1979-2017.csv # Onshore wind capacity factors │ ├── offshore_wind_1979-2017.csv # Offshore wind capacity factors │ ├── pv_optimal.csv # Solar PV capacity factors │ ├── df_global.csv # 4-country load data (BE, FR, NL, DE) │ └── df_techno.csv # Technology parameters & costs ├── plots/ # Output visualizations └── README.md # This file
-Code
 
 
 ## Data Sources
@@ -243,39 +240,6 @@ Code
 - Indicates required CO₂ price to achieve decarbonization targets
 - Compared with existing ETS price (€62/tCO₂)
 
----
-
-## Methodologies & Key Concepts
-
-### 1. Annualization of Capital Costs
-Converting upfront investment into annual costs:
-
-Example - Solar (30-year lifetime, 3% discount): CAPEX = €1.5 million/MW Annualization Factor = 0.0672 Annual Cost = €1.5M × 0.0672 = €100,800/MW/yr
-Code
-
-
-### 2. Capacity Factor
-
-CF = Actual Energy Output / (Installed Capacity × Hours)
-
-Example - Wind turbine: CF = 2,190 MWh / (500 MW × 8,760 h) = 0.50 = 50%
-Code
-
-
-### 3. Sensitivity Analysis
-Inter-annual variability assessment:
-- Run optimization for each of 3 years independently
-- Compare optimal capacities across years
-- Measure variability due to weather differences
-
-### 4. Linear Approximation of AC Power Flow
-DC Approximation assumes:
-- Voltage magnitude ≈ 1.0 pu (per unit)
-- Resistance negligible (x >> r)
-- Small angle differences
-- Result: Linear relationship between angle and power
-
----
 
 ## Tools & Software Stack
 
